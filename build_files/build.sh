@@ -10,7 +10,10 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y tmux fastfetch
+dnf5 -y group install base-x
+dnf5 -y group install mate-desktop
+dnf5 -y group install mate-applications
+dnf5 -y install fastfetch alacritty awesome fish gimp krita netsurf lightdm-gtk
 
 # Use a COPR Example:
 #
@@ -21,4 +24,5 @@ dnf5 install -y tmux fastfetch
 
 #### Example for enabling a System Unit File
 
+systemctl enable lightdm.service
 systemctl enable podman.socket
