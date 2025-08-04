@@ -10,10 +10,9 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 -y group install base-x
-dnf5 -y group install mate-desktop
-dnf5 -y group install mate-applications
-dnf5 -y install fastfetch alacritty awesome fish gimp krita netsurf lightdm-gtk
+dnf5 -y copr enable yalter/niri
+dnf5 -y install niri
+dnf5 -y install flatpak fastfetch alacritty fish
 
 # Use a COPR Example:
 #
@@ -23,6 +22,4 @@ dnf5 -y install fastfetch alacritty awesome fish gimp krita netsurf lightdm-gtk
 # dnf5 -y copr disable ublue-os/staging
 
 #### Example for enabling a System Unit File
-
-systemctl enable lightdm.service
 systemctl enable podman.socket
