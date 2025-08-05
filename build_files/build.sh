@@ -40,6 +40,12 @@ done
 
 dnf5 -y install ${PACKAGES[@]}
 
+# SELinux breaks tdm unfortunately
+sed -i 's/SELINUX=enforcing/SELINUX=permissive/' /etc/selinux/config
+
+# Enable tdm
+systemctl enable tdm
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
