@@ -12,11 +12,29 @@ set -ouex pipefail
 # this installs a package from fedora repos
 dnf5 -y install dnf-plugins-core flatpak
 dnf4 -y copr enable yalter/niri
-dnf5 -y group install base-x
-dnf5 -y install niri
-dnf5 -y install greetd gtkgreet
-dnf5 -y install cage labwc
-dnf5 -y install fastfetch alacritty fish
+
+COPR_REPOS=(
+yalter/niri
+ublue-os/packages
+)
+
+PACKAGES=(
+greetd
+gtkgreet
+cage
+labwc
+fastfetch
+alacritty
+fish
+ublue-brew
+neovim
+)
+
+for i in ${COPR_REPOS[@]}; do
+  dnf4 -y copr enable $i
+done
+
+dnf5 -y install ${PACKAGES[@]}
 
 # Use a COPR Example:
 #
