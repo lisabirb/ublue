@@ -24,6 +24,7 @@ secureblue/bubblejail
 PACKAGES=(
 bubblejail
 librewolf
+niri
 greetd
 gtkgreet
 cage
