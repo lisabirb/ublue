@@ -11,7 +11,9 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 dnf5 -y install dnf-plugins-core flatpak
-dnf4 -y copr enable yalter/niri
+
+# Add Librewolf repo
+curl -fsSL https://repo.librewolf.net/librewolf.repo > /etc/yum.repos.d/librewolf.repo
 
 COPR_REPOS=(
 yalter/niri
