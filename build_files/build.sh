@@ -33,7 +33,6 @@ fastfetch
 alacritty
 fish
 ublue-brew
-ublue-bling
 neovim
 )
 
