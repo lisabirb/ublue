@@ -11,7 +11,7 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 dnf5 -y install dnf-plugins-core flatpak
-dnf5 -y copr enable yalter/niri
+dnf4 -y copr enable yalter/niri
 dnf5 -y install niri
 dnf5 -y install fastfetch alacritty fish
 
