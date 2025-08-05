@@ -22,6 +22,7 @@ secureblue/bubblejail
 )
 
 PACKAGES=(
+NetworkManager-tui
 bubblejail
 librewolf
 niri
