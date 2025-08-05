@@ -21,6 +21,7 @@ secureblue/bubblejail
 
 PACKAGES=(
 bubblejail
+librewolf
 greetd
 gtkgreet
 cage
@@ -29,6 +30,7 @@ fastfetch
 alacritty
 fish
 ublue-brew
+ublue-bling
 neovim
 )
 
