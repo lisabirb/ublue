@@ -13,6 +13,8 @@ set -ouex pipefail
 dnf5 -y install dnf-plugins-core flatpak
 dnf4 -y copr enable yalter/niri
 dnf5 -y install niri
+dnf5 -y install greetd gtkgreet
+dnf5 -y install cage labwc
 dnf5 -y install fastfetch alacritty fish
 
 # Use a COPR Example:
