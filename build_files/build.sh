@@ -16,9 +16,11 @@ dnf4 -y copr enable yalter/niri
 COPR_REPOS=(
 yalter/niri
 ublue-os/packages
+secureblue/bubblejail
 )
 
 PACKAGES=(
+bubblejail
 greetd
 gtkgreet
 cage
